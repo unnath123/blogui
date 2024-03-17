@@ -1,0 +1,14 @@
+.main-container{
+    display: flex;
+
+}
+.main-left{
+    flex:3;
+    background-color: bisque;
+    height:50px;
+}
+.main-right{
+    flex:1;
+    background-color: aquamarine;
+    height:50px;
+}
