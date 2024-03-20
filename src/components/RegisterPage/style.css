@@ -1,0 +1,18 @@
+.RegsiterPage-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+    height:100vh;
+    background-color:#e5eaf5
+}
+.reg-color{
+   background-color: #8458B3;
+}
+a{
+    color:darkblue;
+    
+}
+p,a{
+    font-weight: bold;
+}
