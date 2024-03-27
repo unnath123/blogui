@@ -9,9 +9,11 @@ import { NavLink } from "react-router-dom"
 const App = () => {
   return (
     <div>
+      {/* <Main/> */}
       <Routes>
-        <Route path='/' element={<RegisterPage/>} />
-        <Route path='login' element={<LoginPage/>} />
+        <Route path='/register' element={<RegisterPage/>} />
+        <Route path='/login' element={<LoginPage/>} />
+        <Route path='/main' element={<Main/>} />
       </Routes>
     </div>
   )    

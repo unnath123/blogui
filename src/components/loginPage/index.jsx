@@ -9,20 +9,38 @@ const LoginPage = () =>{
     const url = 'https://blogprojectbackend.onrender.com/auth/login';
 
     const [loginID, setLoginId] = useState("");
-    const [password, setPassword] = useState();
+    const [password, setPassword] = useState("");
 
    async function handleSubmit(e){
         e.preventDefault();
+        const data = {loginID, password}
         try{
-            const response = await axios.post(url, {loginID, password})
+            const response = await axios.post(url, data, {
+                withCredentials: true, 
+              });
             console.log(response.data)
             console.log("hi")
+
+            async function getData(){
+                console.log("main")
+                const url = 'https://blogprojectbackend.onrender.com/follow/follow-list';
+                const response = await axios.get(url,{
+                  withCredentials: true, 
+                })
+                console.log(response.data)
+              }
+          setTimeout(() => {
+            getData();
+          }, 3000);
+             
+
+
         }
         catch(err){
             console.log(err)
         }
     }
-
+    
     return (
         <div className='Loginpage-container'>
             <div className="loginPage-left d-flex">
