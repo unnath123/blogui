@@ -14,7 +14,6 @@ const Main= () => {
       })
       console.log(response.data)
     }
-
    getData();
   }, [])
   

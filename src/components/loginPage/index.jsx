@@ -7,6 +7,7 @@ import axios from 'axios'
 
 const LoginPage = () =>{
     const url = 'https://blogprojectbackend.onrender.com/auth/login';
+     //const url = 'http://localhost:8000/auth/login'
 
     const [loginID, setLoginId] = useState("");
     const [password, setPassword] = useState("");
@@ -19,22 +20,7 @@ const LoginPage = () =>{
                 withCredentials: true, 
               });
             console.log(response.data)
-            console.log("hi")
-
-            async function getData(){
-                console.log("main")
-                const url = 'https://blogprojectbackend.onrender.com/follow/follow-list';
-                const response = await axios.get(url,{
-                  withCredentials: true, 
-                })
-                console.log(response.data)
-              }
-          setTimeout(() => {
-            getData();
-          }, 3000);
-             
-
-
+            console.log("hi")          
         }
         catch(err){
             console.log(err)
